@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const URL = 'https://dev.to/api/articles?tag=javascript';
 
 async function getNoticesDev() {
@@ -26,9 +28,9 @@ export default async function Test() {
                 <ul className="text-3xl font-bold text-blue-600">
                     {data.map((item) => (
                         <li key={item.id} className="bg-gray-200 p-6 rounded-lg shadow-md w-full max-w-5xl mx-auto my-4">
-                            <a>
+                            <Link href={'/api/hello'}>
                                 {item.title}
-                            </a>
+                            </Link>
                         </li>
                     ))}
                 </ul>
