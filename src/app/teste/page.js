@@ -28,8 +28,9 @@ export default async function Test() {
                 <ul className="text-3xl font-bold text-blue-600">
                     {data.map((item) => (
                         <li key={item.id} className="bg-gray-200 p-6 rounded-lg shadow-md w-full max-w-5xl mx-auto my-4">
-                            <Link href={'/api/hello'}>
+                            <Link href={`/posts/${item.id}`} prefetch={true}> {/*isso aqui é uma transição de página para outra dinâmica*/}
                                 {item.title}
+                                {item.id}
                             </Link>
                         </li>
                     ))}
